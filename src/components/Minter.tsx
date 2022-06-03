@@ -11,7 +11,7 @@ import NftCarousel from './Carousel';
 import Video from '../assets/puffpuff.mp4'
 import useScreenType from "react-screentype-hook";
 
-const Minter = () => {
+const Minter = (props: any) => {
     let [mintAmount, setMintAmount ] = useState(0)
     const screenType = useScreenType({
         mobile: 400,
@@ -40,9 +40,9 @@ const Minter = () => {
                 style={{
                     position: 'absolute',
                     zIndex: '-1',
-                    height: '95%',
+                    height: '94%',
                     width: '100%',
-                    top: screenType.isMobile ? '-30%': '',
+                    top: screenType.isMobile ? '-30%': '50%',
                     left: '50%',
                     objectFit: 'cover',
                     transform: 'translate(-50%, 50%)'
@@ -51,14 +51,13 @@ const Minter = () => {
                 <source src={Video} type='video/mp4' />
             </video> 
             <Grid 
+                ref={props.refFromApp}
                 container 
                 spacing={2}
                 sx={{
-                    // backgroundColor: '#556b2f',
                     zIndex: '1',
-                    position: 'relative',
-                    height: {sm: '400px', md:'700px' },
-                    // width: '100%',
+                    // position: 'relative',
+                    height: { sm: '550px', md:'820px' },
                     '.minter-comp': {
                         border: '2px solid black',
                         boxShadow: '4px 4px 0px 1px black',

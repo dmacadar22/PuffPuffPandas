@@ -1,17 +1,12 @@
-import { useState } from 'react';
-import Grid from '@mui/material/Grid';
+import { MouseEvent, useRef, useEffect } from 'react';
 import Box from '@mui/material/Box';
-import Stack from '@mui/material/Stack';
-import Fab from '@mui/material/Fab';
-import AddIcon from '@mui/icons-material/Add';
-import RemoveIcon from '@mui/icons-material/Remove';
-import { Typography } from '@mui/material';
-import { keyframes } from '@mui/system';
 // import Video from '../assets/mintin.mp4'
 import Video from '../assets/mint.mp4'
 import ReactPlayer from 'react-player'
+import { TabScrollButton } from '@mui/material';
 
-const Animation = () => {
+const Animation = (props: any) => {
+
     return (
         <Box sx={{
             height: '100%',
@@ -27,6 +22,17 @@ const Animation = () => {
                 width='100%'
                 height='100%'
             />
+                <Box
+                    sx={{
+                        position: 'absolute',
+                        bottom: { xs: 650 , md: 75 },
+                        right: { xs: 250 , md: 100 },
+                        height: { md: 180, lg: 250 },
+                        width: { md: 400, lg: 650 }
+                    }}
+                    onClick={(e) => props.clickFunction(e)}
+                >
+                </Box>
         </Box>
     )
 }

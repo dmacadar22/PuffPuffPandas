@@ -1,4 +1,4 @@
-import React from 'react';
+import React , { MouseEvent, useRef, useEffect } from 'react';
 import { Minter, Animation } from './components'
 import { Container } from '@mui/material';
 import Box from '@mui/material/Box';
@@ -14,6 +14,19 @@ const theme = createTheme({
   },
 });
 function App() {
+  const tabsRef = useRef<null | HTMLDivElement>(null)
+  const handleSeeCompleteList = (e: MouseEvent<HTMLDivElement, globalThis.MouseEvent>) => {
+      const tabs = tabsRef.current
+      if (tabs) {
+        tabs!.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        })
+      }
+    }
+    useEffect(() => {
+      console.log(tabsRef.current);
+    }, [tabsRef]);
   return (
     <ThemeProvider theme={theme}>
       <Box className="App" 
@@ -27,8 +40,8 @@ function App() {
           flexDirection: 'column',
         }} 
         >
-        <Animation />
-        <Minter />
+        <Animation clickFunction={handleSeeCompleteList}/>
+        <Minter refFromApp={tabsRef} />
       </Box>
     </ThemeProvider>
   );
