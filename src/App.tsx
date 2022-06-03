@@ -1,6 +1,5 @@
 import React , { MouseEvent, useRef, useEffect } from 'react';
 import { Minter, Animation } from './components'
-import { Container } from '@mui/material';
 import Box from '@mui/material/Box';
 import { createTheme } from '@mui/material/styles';
 import ThemeProvider from '@mui/system/ThemeProvider/ThemeProvider';

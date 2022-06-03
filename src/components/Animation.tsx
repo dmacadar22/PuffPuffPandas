@@ -1,9 +1,7 @@
-import { MouseEvent, useRef, useEffect } from 'react';
 import Box from '@mui/material/Box';
 // import Video from '../assets/mintin.mp4'
 import Video from '../assets/mint.mp4'
 import ReactPlayer from 'react-player'
-import { TabScrollButton } from '@mui/material';
 
 const Animation = (props: any) => {
 
