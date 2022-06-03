@@ -1,25 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Minter, Animation } from './components'
+import { Container } from '@mui/material';
+import Box from '@mui/material/Box';
+import { createTheme } from '@mui/material/styles';
+import ThemeProvider from '@mui/system/ThemeProvider/ThemeProvider';
 
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#369332',
+      light: '#67ae64',
+    },
+  },
+});
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <ThemeProvider theme={theme}>
+      <Box className="App" 
+        sx={{
+          margin: 0,
+          padding: 0,
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          alignContent: 'center',
+          flexDirection: 'column',
+        }} 
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+        <Animation />
+        <Minter />
+      </Box>
+    </ThemeProvider>
   );
 }
 
