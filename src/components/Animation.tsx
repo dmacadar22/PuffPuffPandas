@@ -2,13 +2,21 @@ import Box from '@mui/material/Box';
 // import Video from '../assets/mintin.mp4'
 import Video from '../assets/mint.mp4'
 import ReactPlayer from 'react-player'
+import useScreenType from 'react-screentype-hook';
 
 const Animation = (props: any) => {
+    const screenType = useScreenType({
+        mobile: 400,
+        tablet: 800,
+        desktop: 1000,
+        largeDesktop: 1600,
+      });
 
     return (
         <Box sx={{
             height: '100%',
             width: '100%',
+            display: screenType.isMobile ? 'none' : 'block',
         }}>
             <ReactPlayer
                 url={Video}
