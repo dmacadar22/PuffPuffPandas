@@ -40,12 +40,13 @@ const Minter = (props: any) => {
                 style={{
                     position: 'absolute',
                     zIndex: '-1',
-                    height: '94%',
+                    height: screenType.isMobile ? '150%': '100%',
                     width: '100%',
                     // top: screenType.isMobile ? '-30%': '50%',
-                    left: '50%',
+                    left: screenType.isMobile ? '' : '50%',
+                    // objectFit: 'cover',
                     objectFit: 'cover',
-                    transform: 'translate(-50%, 50%)'
+                    transform: screenType.isMobile ? '': 'translate(-50%, 45%)'
                 }}
             >
                 <source src={Video} type='video/mp4' />
@@ -57,7 +58,7 @@ const Minter = (props: any) => {
                 sx={{
                     zIndex: '1',
                     // position: 'relative',
-                    height: { sm: '550px', md:'820px' },
+                    height: {  md:'820px' },
                     '.minter-comp': {
                         border: '2px solid black',
                         boxShadow: '4px 4px 0px 1px black',
@@ -81,8 +82,6 @@ const Minter = (props: any) => {
                 justifyContent="space-evenly"
 
             >
-    
-
             <Grid
                 item
       

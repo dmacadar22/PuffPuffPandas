@@ -28,7 +28,7 @@ const NftCarousel = () => {
     return (
     <Box
     sx={{
-        height: { xs: 300, md: 450 },
+        height: { xs: 400, md: 450 },
         width: { xs: 300, md: 400 },
         '.carousel-slider': {
             border: '8px solid white',

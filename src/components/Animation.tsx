@@ -16,7 +16,7 @@ const Animation = (props: any) => {
         <Box sx={{
             height: '100%',
             width: '100%',
-            display: screenType.isMobile ? 'none' : 'block',
+            // display: screenType.isMobile ? 'none' : 'block',
         }}>
             <ReactPlayer
                 url={Video}
