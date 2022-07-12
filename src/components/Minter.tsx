@@ -31,7 +31,7 @@ const Minter = (props: any) => {
 
     return (
         <>
-            <video 
+        <video 
                 loop 
                 autoPlay
                 preload="auto"
@@ -42,7 +42,7 @@ const Minter = (props: any) => {
                     zIndex: '-1',
                     height: '94%',
                     width: '100%',
-                    top: screenType.isMobile ? '-30%': '50%',
+                    // top: screenType.isMobile ? '-30%': '50%',
                     left: '50%',
                     objectFit: 'cover',
                     transform: 'translate(-50%, 50%)'
@@ -81,6 +81,7 @@ const Minter = (props: any) => {
                 justifyContent="space-evenly"
 
             >
+    
 
             <Grid
                 item
