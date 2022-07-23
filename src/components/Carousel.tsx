@@ -32,7 +32,8 @@ const NftCarousel = () => {
         width: { xs: 300, md: 400 },
         '.carousel-slider': {
             border: '8px solid white',
-            borderRadius: '2.5%'
+            borderRadius: '2.5%',
+            margin: '20% 0 0 0!important'
         }
     }}
     >

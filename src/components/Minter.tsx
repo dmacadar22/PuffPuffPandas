@@ -58,7 +58,7 @@ const Minter = (props: any) => {
                 sx={{
                     zIndex: '1',
                     // position: 'relative',
-                    height: {  md:'820px' },
+                    height: {  md:'auto' },
                     '.minter-comp': {
                         border: '2px solid black',
                         boxShadow: '4px 4px 0px 1px black',
