@@ -10,8 +10,9 @@ import RemoveIcon from '@mui/icons-material/Remove';
 import NftCarousel from './Carousel';
 import Video from '../assets/puffpuff.mp4'
 import useScreenType from "react-screentype-hook";
-
+import { useConnection } from '../hooks/useConnection';
 const Minter = (props: any) => {
+    const {connectedState,connectHandler} = useConnection();
     let [mintAmount, setMintAmount ] = useState(0)
     const screenType = useScreenType({
         mobile: 400,
@@ -162,7 +163,7 @@ const Minter = (props: any) => {
                                 fontFamily: 'Roboto'
                             }}
                         >
-                            MINT
+                            {connectedState.connected ? 'Mint' : 'Connect Wallet'}
                         </Typography>
                     </Button>
                     {/* End minter */}
