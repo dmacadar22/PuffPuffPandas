@@ -151,6 +151,15 @@ const Minter = (props: any) => {
                         </Fab>
                     </Stack>
                     <Button
+                    onClick={() => {
+                        if(connectedState.connected) {
+                            //Mint
+                            return
+                    }
+                else{
+                    connectHandler();
+                }}
+            }
                         color='primary'
                         // variant='extended'
                         className='mint minter-comp'

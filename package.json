@@ -16,34 +16,28 @@
     "@types/react": "^18.0.10",
     "@types/react-dom": "^18.0.5",
     "@walletconnect/web3-provider": "^1.8.0",
-    "assert": "^2.0.0",
-    "buffer": "^6.0.3",
-    "https-browserify": "^1.0.0",
     "jotai": "^1.8.4",
-    "os-browserify": "^0.3.0",
     "postcss": "^8.4.14",
     "react": "^18.1.0",
+    "react-app-rewired": "^2.2.1",
     "react-dom": "^18.1.0",
     "react-player": "^2.10.1",
     "react-responsive-carousel": "^3.2.23",
     "react-screentype-hook": "^1.0.18",
     "react-scripts": "5.0.1",
     "react-use": "^17.4.0",
-    "stream-browserify": "^3.0.0",
-    "stream-http": "^3.2.0",
     "style-loader": "^3.3.1",
     "typescript": "^4.7.2",
-    "url": "^0.11.0",
     "util": "^0.12.4",
     "web-vitals": "^2.1.4",
     "web3modal": "^1.9.9"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
+  "scripts": { 
+    "start": "react-app-rewired start", 
+    "build": "react-app-rewired build", 
+    "test": "react-app-rewired test", 
+    "eject": "react-scripts eject" 
+   },
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -63,6 +57,15 @@
     ]
   },
   "devDependencies": {
-    "css-loader": "^6.7.1"
+    "assert": "^2.0.0",
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.0",
+    "css-loader": "^6.7.1",
+    "https-browserify": "^1.0.0",
+    "os-browserify": "^0.3.0",
+    "process": "^0.11.10",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.2.0",
+    "url": "^0.11.0"
   }
 }
